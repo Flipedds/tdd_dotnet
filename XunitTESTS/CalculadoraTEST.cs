@@ -36,7 +36,7 @@ public class CalculadoraTEST
 
     [Theory]
     [InlineData(10, 2, 5)]
-    [InlineData(25, 3, 5)]
+    [InlineData(15, 3, 5)]
     public void CalculadoraDividirDeveRetornarDivisaoCorretamente(int numeroUm, int numeroDois, int res)
     {
         //act

@@ -11,4 +11,8 @@ public class Calculadora
     {
         return valorUm - valorDois;
     }
+    public int Dividir(int valorUm, int valorDois)
+    {
+        return valorUm / valorDois;
+    }
 }
