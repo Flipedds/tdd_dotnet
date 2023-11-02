@@ -46,4 +46,13 @@ public class CalculadoraTEST
         Assert.Equal(res, resultado);
     }
 
+    [Theory]
+    [InlineData(10, 0)]
+    [InlineData(15, 0)]
+    [InlineData(20, 0)]
+    public void CalculadoraDividirRetornaExceptionAoDividirPor0(int numeroUm, int numeroDois)
+    {
+        //assert
+        Assert.Throws<DivideByZeroException>(() => _calculadora.Dividir(numeroUm, numeroDois));
+    }
 }
