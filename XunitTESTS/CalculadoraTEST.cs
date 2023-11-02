@@ -8,16 +8,16 @@ public class CalculadoraTEST
         _calculadora = new Calculadora();
     }
     [Theory]
-    [InlineData(1, 2)]
-    [InlineData(2, 3)]
-    [InlineData(4, 5)]
-    [InlineData(6, 5)]
-    public void CalculadoraSomarDeveRetornarSomaCorretamente(int numeroUm, int numeroDois)
+    [InlineData(1, 2, 3)]
+    [InlineData(2, 3, 5)]
+    [InlineData(4, 5, 9)]
+    [InlineData(6, 5, 11)]
+    public void CalculadoraSomarDeveRetornarSomaCorretamente(int numeroUm, int numeroDois, int res)
     {
         //act
         int resultado = _calculadora.Somar(numeroUm, numeroDois);
 
         //assert
-        Assert.Equal(numeroUm + numeroDois, resultado);
+        Assert.Equal(res, resultado);
     }
 }
