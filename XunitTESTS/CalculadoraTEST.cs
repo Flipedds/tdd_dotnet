@@ -7,17 +7,17 @@ public class CalculadoraTEST
     {
         _calculadora = new Calculadora();
     }
-    [Fact]
-    public void CalculadoraSomarDeveRetornarSomaCorretamente()
+    [Theory]
+    [InlineData(1, 2)]
+    [InlineData(2, 3)]
+    [InlineData(4, 5)]
+    [InlineData(6, 5)]
+    public void CalculadoraSomarDeveRetornarSomaCorretamente(int numeroUm, int numeroDois)
     {
-        //arrange
-        int numeroUm = 1;
-        int numeroDois = 2;
-
         //act
         int resultado = _calculadora.Somar(numeroUm, numeroDois);
 
         //assert
-        Assert.Equal(3, resultado);
+        Assert.Equal(numeroUm + numeroDois, resultado);
     }
 }
