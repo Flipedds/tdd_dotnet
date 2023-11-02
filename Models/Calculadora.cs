@@ -15,4 +15,8 @@ public class Calculadora
     {
         return valorUm / valorDois;
     }
+    public int Multiplicar(int valorUm, int valorDois)
+    {
+        return valorUm * valorDois;
+    }
 }
