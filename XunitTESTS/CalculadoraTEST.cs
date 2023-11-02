@@ -33,4 +33,17 @@ public class CalculadoraTEST
         //assert
         Assert.Equal(res, resultado);
     }
+
+    [Theory]
+    [InlineData(10, 2, 5)]
+    [InlineData(25, 3, 5)]
+    public void CalculadoraDividirDeveRetornarDivisaoCorretamente(int numeroUm, int numeroDois, int res)
+    {
+        //act
+        int resultado = _calculadora.Dividir(numeroUm, numeroDois);
+
+        //assert
+        Assert.Equal(res, resultado);
+    }
+
 }
