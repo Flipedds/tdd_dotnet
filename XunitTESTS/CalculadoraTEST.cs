@@ -20,4 +20,17 @@ public class CalculadoraTEST
         //assert
         Assert.Equal(res, resultado);
     }
+    [Theory]
+    [InlineData(1, 2, 1)]
+    [InlineData(2, 3, -1)]
+    [InlineData(4, 5, -1)]
+    [InlineData(6, 5, 1)]
+    public void CalculadoraSubtrairDeveRetornarSubtracaoCorretamente(int numeroUm, int numeroDois, int res)
+    {
+        //act
+        int resultado = _calculadora.Subtrair(numeroUm, numeroDois);
+
+        //assert
+        Assert.Equal(res, resultado);
+    }
 }
