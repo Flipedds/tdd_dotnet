@@ -6,4 +6,9 @@ public class Calculadora
     {
         return valorUm + valorDois;
     }
+
+    public int Subtrair(int valorUm, int valorDois)
+    {
+        return valorUm - valorDois;
+    }
 }

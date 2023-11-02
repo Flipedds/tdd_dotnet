@@ -21,7 +21,7 @@ public class CalculadoraTEST
         Assert.Equal(res, resultado);
     }
     [Theory]
-    [InlineData(1, 2, 1)]
+    [InlineData(1, 2, -1)]
     [InlineData(2, 3, -1)]
     [InlineData(4, 5, -1)]
     [InlineData(6, 5, 1)]
