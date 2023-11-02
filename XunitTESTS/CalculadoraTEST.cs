@@ -55,4 +55,17 @@ public class CalculadoraTEST
         //assert
         Assert.Throws<DivideByZeroException>(() => _calculadora.Dividir(numeroUm, numeroDois));
     }
+
+    [Theory]
+    [InlineData(10, 2, 20)]
+    [InlineData(15, 3, 45)]
+    public void CalculadoraMultiplicarDeveRetornarMultiplicacaoCorretamente(int numeroUm, int numeroDois, int res)
+    {
+        //act
+        int resultado = _calculadora.Multiplicar(numeroUm, numeroDois);
+
+        //assert
+        Assert.Equal(res, resultado);
+    }
+
 }
