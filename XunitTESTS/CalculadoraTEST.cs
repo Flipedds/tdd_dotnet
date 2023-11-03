@@ -71,6 +71,9 @@ public class CalculadoraTEST
     [Fact]
     public void CalculadoraHistoricoDeveRetornarAsUltimasOperacoes()
     {
+        _calculadora.Somar(1, 2);
+        _calculadora.Somar(2, 3);
+        _calculadora.Somar(4, 5);
         //act
         List<string> resultado = _calculadora.GetHistorico();
 
