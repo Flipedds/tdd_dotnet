@@ -7,26 +7,26 @@ public class Calculadora
     {   
         int res = valorUm + valorDois;
         historico.Insert(0, "Res" + res);
-        return valorUm + valorDois;
+        return res;
     }
 
     public int Subtrair(int valorUm, int valorDois)
     {
         int res = valorUm - valorDois;
         historico.Insert(0, "Res" + res);
-        return valorUm - valorDois;
+        return res;
     }
     public int Dividir(int valorUm, int valorDois)
     {
         int res = valorUm / valorDois;
         historico.Insert(0, "Res" + res);
-        return valorUm / valorDois;
+        return res;
     }
     public int Multiplicar(int valorUm, int valorDois)
     {
         int res = valorUm * valorDois;
         historico.Insert(0, "Res" + res);
-        return valorUm * valorDois;
+        return res;
     }
 
     public List<string> GetHistorico()
