@@ -68,4 +68,13 @@ public class CalculadoraTEST
         Assert.Equal(res, resultado);
     }
 
+    [Fact]
+    public void CalculadoraHistoricoDeveRetornarAsUltimasOperacoes()
+    {
+        //act
+        List<string> resultado = _calculadora.GetHistorico();
+
+        //assert
+        Assert.Equal(3, resultado.Count);
+    }
 }
