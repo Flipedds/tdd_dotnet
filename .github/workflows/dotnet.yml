@@ -12,12 +12,15 @@ on:
 jobs:
   testAndBuild:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet_version: ['7.0.x', '8.0.x', '>=7.0.x']
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 7.0.x
+        dotnet-version:  ${{ matrix.dotnet_version }}
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
