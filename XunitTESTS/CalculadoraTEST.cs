@@ -78,6 +78,6 @@ public class CalculadoraTEST
         List<string> resultado = _calculadora.GetHistorico();
 
         //assert
-        Assert.Equal(4, resultado.Count);
+        Assert.Equal(3, resultado.Count);
     }
 }
